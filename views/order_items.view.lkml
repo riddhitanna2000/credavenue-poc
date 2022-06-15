@@ -110,6 +110,12 @@ view: order_items {
     value_format_name: usd
   }
 
+  measure:  avg_spend_per_user {
+    type: number
+    value_format_name: usd
+    sql: 1.0 * ${total_sale_price} / nullif(${users.count},0) ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
