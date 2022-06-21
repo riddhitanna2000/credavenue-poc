@@ -30,10 +30,8 @@ explore: users {
 explore: products {}
 
 explore: order_items {
-  access_filter: {
-    field: products.category
-    user_attribute: category_id
-  }
+
+
   join: users {
     type: left_outer
     sql_on: ${order_items.user_id} = ${users.id} ;;
