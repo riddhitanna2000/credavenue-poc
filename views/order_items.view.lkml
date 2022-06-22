@@ -109,6 +109,12 @@ view: order_items {
     value_format_name: usd
     type: sum
     sql: ${sale_price} ;;
+    drill_fields: [products.department,products.category,products.brand,
+      total_sale_price]
+    link: {
+      label: "take me to product category visual"
+      url: "https://crav.cloud.looker.com/looks/3"
+    }
     }
 
   measure:  avg_spend_per_user {

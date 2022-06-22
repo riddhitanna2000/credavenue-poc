@@ -5,7 +5,7 @@ include: "/views/**/*.view"
 
 datagroup: orders_datagroup {
   sql_trigger: SELECT max(id) FROM order_items ;;
-  max_cache_age: "24 hours"
+  max_cache_age: "1 hours"
   label: "ETL ID added"
   description: "Triggered when new ID is added to ETL log"
 }
