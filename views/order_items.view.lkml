@@ -109,6 +109,7 @@ view: order_items {
     type: sum
     sql: ${sale_price} ;;
     value_format_name: usd
+    drill_fields: [products.department,products.category,products.brand]
   }
 
   measure:  avg_spend_per_user {
