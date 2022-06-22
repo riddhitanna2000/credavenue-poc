@@ -106,10 +106,11 @@ view: order_items {
 
   measure: total_sale_price {
     label: "Total Sale Price"
+    value_format_name: usd
     type: sum
     sql: ${sale_price} ;;
-    value_format_name: usd
-    drill_fields: [products.department,products.category,products.brand]
+    drill_fields: [products.department,products.category,products.brand,
+      total_sale_price]
   }
 
   measure:  avg_spend_per_user {
