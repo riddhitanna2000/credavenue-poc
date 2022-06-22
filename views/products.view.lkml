@@ -1,5 +1,5 @@
 view: products {
-  sql_table_name: `ecommerce_data.products`
+sql_table_name: `ecommerce_data.products`
     ;;
   drill_fields: [id]
 
