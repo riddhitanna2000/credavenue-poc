@@ -111,6 +111,10 @@ view: order_items {
     sql: ${sale_price} ;;
     drill_fields: [products.department,products.category,products.brand,
       total_sale_price]
+    link: {
+      label: "take me to product look"
+      url: "https://crav.cloud.looker.com/looks/2"
+    }
 
   }
 
@@ -125,10 +129,7 @@ measure: drill_fields_products.brand {
   type: sum
   sql: 0 ;;
   drill_fields: [drill_fields_products.brand,total_sale_price]
-  link: {
-    label: "take me to product look"
-    url: "https://crav.cloud.looker.com/looks/2"
-  }
+
 }
   # ----- Sets of fields for drilling ------
   set: detail {
