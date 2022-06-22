@@ -111,6 +111,7 @@ view: order_items {
     sql: ${sale_price} ;;
     drill_fields: [products.department,products.category,products.brand,
       total_sale_price]
+
   }
 
   measure:  avg_spend_per_user {
@@ -119,6 +120,16 @@ view: order_items {
     sql: 1.0 * ${total_sale_price} / nullif(${users.count},0) ;;
   }
 
+measure: drill_fields_products.brand {
+  hidden: yes
+  type: sum
+  sql: 0 ;;
+  drill_fields: [drill_fields_products.brand,total_sale_price]
+  link: {
+    label: "take me to product look"
+    url: "https://crav.cloud.looker.com/looks/2"
+  }
+}
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
